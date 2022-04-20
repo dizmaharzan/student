@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <title>show form</title>
+</head>
+<body>
+</hr>
+<div class="container">
+    <form action="#" th:action="@{/students/back}"
+          th:object="${student}" method="POST">
+        <input type="hidden" th:field="*{id}" />
+        <label>
+            <input type="text" th:field="*{name}" placeholder=" Name" class="form-control mb-4 col-15" readonly="readonly">
+        </label>
+        <label>
+            <input type="text" th:field="*{email}" placeholder="Email" class="form-control mb-4 col-15" readonly="readonly">
+        </label>
+        <label>
+            <input type="text" th:field="*{phoneno}" placeholder="Phone No" class="form-control mb-4 col-15" readonly="readonly">
+        </label>
+        <button type="submit" class="btn btn-primary"><i class="fa fa-arrow-left fa-fw" aria-hidden="true"></i>&nbsp; Back</button>
+    </form>
+</div>
+
+</body>
+
+</html>
